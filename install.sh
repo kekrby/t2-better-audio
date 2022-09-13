@@ -2,9 +2,10 @@
 
 if [ $USER != root ]
 then
-sudo chmod 755 $0
-sudo $0
-exit 0
+    echo This script must be run as root, you will be prompted for your password
+    sudo chmod 755 $0
+    sudo $0
+    exit 0
 fi
 
 cp -v files/alsa-card-configs/* /usr/share/alsa/cards/
