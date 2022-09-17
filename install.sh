@@ -8,13 +8,4 @@ then
     exit 0
 fi
 
-for dir in "/usr/share/alsa-card-profile/mixer/profile-sets/" "/usr/share/pulseaudio/alsa-mixer/profile-sets/"
-do
-    if [ -d "$dir" ]
-    then
-        cp -v files/profile-sets/* $dir
-    fi
-done
-
-cp -v files/alsa-card-configs/* /usr/share/alsa/cards/
-cp -v files/91-pulseaudio-custom.rules /usr/lib/udev/rules.d/
+cp -rv files/ucm2/* /usr/share/alsa/ucm2
