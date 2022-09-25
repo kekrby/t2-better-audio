@@ -8,4 +8,12 @@ then
     exit 0
 fi
 
-cp -rv files/ucm2/* /usr/share/alsa/ucm2
+for dir in "/usr/share/alsa-card-profile/mixer" "/usr/share/pulseaudio/alsa-mixer"
+do
+    if [ -d "$dir" ]
+    then
+        cp -rv files/{profile-sets,paths} $dir
+    fi
+done
+
+cp -v files/91-audio-custom.rules /usr/lib/udev/rules.d/

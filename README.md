@@ -1,6 +1,6 @@
 # Better Audio for Macs with the T2 Chip
 
-Currently, someone who wants to run linux on their T2 Mac must install the audio files manually depending on their model and things like switching to headphones when plugging them automatically does not work, so the situation is less than ideal. Coupled with changes made in `apple-bce`, this repository tries to improve this situation. Both `pipewire` and `pulseaudio` can be used but `pulseaudio` needs to be built with [this patch](https://gitlab.freedesktop.org/pulseaudio/pulseaudio/-/merge_requests/596.patch) applied as a new version with the changes included has not been released yet.
+Currently, someone who wants to run linux on their T2 Mac must install the audio files manually depending on their model and things like switching to headphones when plugging them automatically does not work, so the situation is less than ideal. Coupled with changes made in `apple-bce`, this repository tries to improve this situation. Both `pipewire` and `pulseaudio` can be used.
 
 Note that an `apple-bce` with [these changes made](https://github.com/kekrby/apple-bce) is required.
 

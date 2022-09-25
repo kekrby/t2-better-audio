@@ -1,0 +1,7 @@
+SUBSYSTEM!="sound", GOTO="pulseaudio_end"
+ACTION!="change", GOTO="pulseaudio_end"
+KERNEL!="card*", GOTO="pulseaudio_end"
+
+SUBSYSTEMS=="pci", ATTRS{vendor}=="0x106b", ATTRS{device}=="0x1803", PROGRAM="/usr/bin/sed -n 's/.*AppleT2x\([0-9]\).*/\1/p' /proc/asound/cards", ENV{PULSE_PROFILE_SET}="apple-t2x%c.conf", ENV{ACP_PROFILE_SET}="apple-t2x%c.conf"
+
+LABEL="pulseaudio_end"
