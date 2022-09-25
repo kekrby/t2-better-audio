@@ -6,7 +6,7 @@
 if [ $USER != root ]
 then
     echo This script must be run as root, you will be prompted for your password
-    echo ${XDG_CONFIG_HOME:-~/.config} | sudo tee /tmp/user.txt
+    echo ${XDG_CONFIG_HOME:-~/.config} | sudo tee /tmp/user.txt >/dev/null
     sudo chmod 755 $0
     sudo ./$0
     sudo rm /tmp/user.txt
