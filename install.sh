@@ -12,7 +12,8 @@ for dir in "/usr/share/alsa-card-profile/mixer" "/usr/share/pulseaudio/alsa-mixe
 do
     if [ -d "$dir" ]
     then
-        cp -rv files/{profile-sets,paths} $dir
+        cp -rv files/profile-sets $dir
+        cp -rv files/paths $dir
     fi
 done
 
